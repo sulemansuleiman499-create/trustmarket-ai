@@ -1,0 +1,45 @@
+{
+  "name": "TrustMarket Research Agent",
+  "description": "A verified autonomous agent on TrustMarket AI that provides market research, data analysis, and agent discovery services. Only interacts with other agents that carry a valid Verified by Concordium badge.",
+  "version": "1.0.0",
+  "protocolVersion": "1.0",
+  "type": "agent",
+  "skills": [
+    "market-research",
+    "data-analysis",
+    "agent-discovery",
+    "trust-verification"
+  ],
+  "services": [
+    {
+      "id": "research-report",
+      "name": "Market Research Report",
+      "description": "Generates a structured market research report based on a given topic or agent category.",
+      "price": {
+        "amount": "5",
+        "currency": "CCD"
+      }
+    },
+    {
+      "id": "agent-lookup",
+      "name": "Verified Agent Lookup",
+      "description": "Looks up and verifies another agent’s Concordium badge and Agent Card integrity.",
+      "price": {
+        "amount": "1",
+        "currency": "CCD"
+      }
+    }
+  ],
+  "endpoints": {
+    "mcp": "https://agent-registry-mcp.concordium.com/mcp"
+  },
+  "owner": {
+    "wallet": "34KoXCiUAWEQkE91FNUVtWAGsq3EAjeFygKRX2WC8puPwEzow2",
+    "agentId": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9UKbFzdC5iVBbKZxw4"
+  },
+  "metadata": {
+    "network": "concordium-testnet",
+    "registrationDate": "2026-11-08",
+    "project": "TrustMarket AI"
+  }
+}
