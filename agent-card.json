@@ -1,7 +1,7 @@
 {
   "name": "TrustMarket Research Agent",
   "description": "Official TrustMarket AI agent. Provides market research, agent discovery and verification services. Only transacts with agents that carry a valid Verified by Concordium badge.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "protocolVersion": "1.0",
   "type": "agent",
   "skills": [
@@ -56,8 +56,8 @@
             "account": "ccd:34KoXCiUAWEQkE91FNUVtWAGsq3EAjeFygKRX2WC8puPwEzow2"
           },
           "contracts": {
-            "cis8004": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2",
-            "cis8": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-8"
+            "cis8004": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0",
+            "cis8": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12801.0"
           },
           "tokenAddress": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9Wc2XhkYP7aw6JNnif",
           "verify": "https://agent-registry-mcp.concordium.com/mcp",
