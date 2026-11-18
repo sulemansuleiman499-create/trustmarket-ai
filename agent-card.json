@@ -1,7 +1,7 @@
 {
   "name": "TrustMarket Research Agent",
   "description": "Official TrustMarket AI agent. Provides market research, agent discovery and verification services. Only transacts with agents that carry a valid Verified by Concordium badge.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "protocolVersion": "1.0",
   "type": "agent",
   "skills": [
@@ -40,29 +40,34 @@
   "registrations": [
     {
       "agentId": 1168,
-      "agentRegistry": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2"
+      "agentRegistry": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0"
     }
   ],
-  "x402Support": true,
+  "x402Support": false,
   "active": true,
   "capabilities": {
     "extensions": [
       {
         "uri": "https://docs.concordium.com/a2a-extensions/concordium-badge/v1",
-        "description": "Verified by Concordium badge",
+        "description": "Verified by Concordium badge — on-chain agent identity in a CIS-8004 registry",
         "required": false,
         "params": {
+          "tokenAddress": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9Wc2XhkYP7aw6JNnif",
           "owner": {
-            "account": "ccd:34KoXCiUAWEQkE91FNUVtWAGsq3EAjeFygKRX2WC8puPwEzow2"
+            "account": "ccd:4221332d34e1694168c2a0c0b3fd0f27:34KoXCiUAWEQkE91FNUVtWAGsq3EAjeFygKRX2WC8puPwEzow2"
           },
+          "agentWallet": "ccd:4221332d34e1694168c2a0c0b3fd0f27:34KoXCiUAWEQkE91FNUVtWAGsq3EAjeFygKRX2WC8puPwEzow2",
           "contracts": {
             "cis8004": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0",
             "cis8": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12801.0"
           },
-          "tokenAddress": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9Wc2XhkYP7aw6JNnif",
-          "verify": "https://agent-registry-mcp.concordium.com/mcp",
-          "network": "concordium-testnet",
-          "status": "Active"
+          "verify": "Resolve tokenAddress via CIS-8004 agent_of; confirm owner + status=Active + card SHA-256 == metadata_hash.",
+          "verification": {
+            "service": "Concordium Agent Registry",
+            "verifyUrl": "https://agent-registry-mcp.concordium.com/v1/badge-check/JyP9Wc2XhkYP7aw6JNnif",
+            "mcp": "https://agent-registry-mcp.concordium.com/mcp",
+            "docs": "https://docs.concordium.com/en/mainnet/technical-reference/agent-registry/concordium-badge.html"
+          }
         }
       }
     ]
