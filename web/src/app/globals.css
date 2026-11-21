@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/*
+ * TrustMarket AI — design tokens
+ *
+ * A single dark, enterprise-grade theme. All colours are explicit
+ * (no prefers-color-scheme switching: the product is dark-first).
+ */
+@theme {
+  --color-canvas: #08090d;
+  --color-surface: #0e1016;
+  --color-surface-raised: #14161d;
+  --color-overlay: #1a1d26;
+
+  --color-line: #171a22; /* hairline border on canvas */
+  --color-line-strong: #262a36;
+
+  --color-ink: #e7e9f0;
+  --color-ink-secondary: #9aa1b4;
+  --color-ink-muted: #5d6474;
+
+  --color-accent: #6f66ff;
+  --color-accent-hover: #8b84ff;
+  --color-accent-muted: #6f66ff22;
+
+  --color-success: #2dc68f;
+  --color-success-muted: #2dc68f1e;
+  --color-warning: #e0b04a;
+  --color-warning-muted: #e0b04a1e;
+  --color-danger: #e2606f;
+  --color-danger-muted: #e2606f1e;
+
+  --color-code: #0b0d13;
+}
+
+/*
+ * Fonts are wired to the Geist variables set in the root layout.
+ * `inline` keeps the runtime var indirection instead of resolving at build time.
+ */
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Code", monospace;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Consistent, silent scrollbars for panels and tables */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
